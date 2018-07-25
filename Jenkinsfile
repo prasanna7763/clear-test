@@ -1,6 +1,6 @@
 node("host") {
         stage("remove old containers"){
-          sh "sudo docker rm -f v1.1-green1 v1.1-green2 sboot_demo_pg ng"      
+          //sh "sudo docker rm -f v1.1-green1 v1.1-green2 sboot_demo_pg ng"      
         }
         stage("Start containers - Blue"){   
           sh "sudo docker run -d --env=POSTGRES_PASSWORD=demo_pass  -p 5432:5432  --name sboot_demo_pg devopsevd/sboot_demo_pg"
