@@ -1,4 +1,4 @@
-node("host") {
+node("AppServer") {
         stage("remove old containers"){
           //sh "sudo docker rm -f v1.1-green1 v1.1-green2 sboot_demo_pg ng"      
         }
