@@ -1,6 +1,6 @@
 node("AppServer") {
         stage("remove old containers"){
-          sh "sudo docker rm -f (docker ps -aq)"      
+          //sh "sudo docker rm -f (docker ps -aq)"      
         }
         stage("Start containers - Blue"){   
           sh "sudo docker run -d --env=POSTGRES_PASSWORD=demo_pass  -p 5432:5432  --name sboot_demo_pg devopsevd/sboot_demo_pg"
